@@ -1,4 +1,4 @@
-package com.anleylab.amharic_catholic_bible
+package et.anleylab.catholicbible
 
 import io.flutter.embedding.android.FlutterActivity
 

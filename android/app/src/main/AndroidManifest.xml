@@ -1,4 +1,5 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="et.anleylab.catholicbible">
     <application
         android:label="የካቶሊክ መጽሐፍ ቅዱስ"
         android:name="${applicationName}"

@@ -14,7 +14,7 @@ plugins {
 }
 
 android {
-    namespace = "com.anleylab.amharic_catholic_bible"
+    namespace = "et.anleylab.catholicbible"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -24,7 +24,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.anleylab.amharic_catholic_bible"
+        applicationId = "et.anleylab.catholicbible"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
