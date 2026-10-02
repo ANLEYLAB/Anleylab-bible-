@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:amharic_catholic_bible/core/settings_manager.dart';
 import 'package:amharic_catholic_bible/theme/app_colors.dart';
 import 'package:amharic_catholic_bible/features/settings/about_screen.dart';
+import 'package:amharic_catholic_bible/features/settings/privacy_policy_screen.dart';
 
 /// Full-page Settings screen.
 ///
@@ -122,6 +123,15 @@ class SettingsScreen extends StatelessWidget {
                     context,
                     MaterialPageRoute(builder: (_) => const AboutScreen()),
                   );
+                },
+              ),
+              ListTile(
+                leading: const Icon(Icons.privacy_tip_outlined),
+                title: const Text('የግላዊነት ፖሊሲ (Privacy Policy)'),
+                subtitle: const Text('100% Offline • No Data Collected'),
+                trailing: const Icon(Icons.arrow_forward_ios, size: 14),
+                onTap: () {
+                  PrivacyPolicyScreen.show(context);
                 },
               ),
             ],

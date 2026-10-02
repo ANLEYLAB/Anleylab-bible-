@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:amharic_catholic_bible/theme/app_colors.dart';
+import 'package:amharic_catholic_bible/features/settings/privacy_policy_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AboutScreen extends StatelessWidget {
@@ -192,26 +193,44 @@ class AboutScreen extends StatelessWidget {
             const SizedBox(height: 28),
 
             // PRIVACY & OFFLINE CARD
-            Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: theme.cardColor,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(
-                  color: theme.dividerColor.withValues(alpha: 0.1),
-                ),
-              ),
-              child: Row(
-                children: [
-                  const Icon(Icons.shield_outlined, color: primaryGold, size: 24),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Text(
-                      'የአንሌይላብ መጽሐፍ ቅዱስ ሙሉ በሙሉ በነፃ የሚሰራ ሲሆን የንባብ መረጃዎን ወይም ማንነትዎን በምንም መልኩ አይሰበስብም። መለያ መፍጠርም አያስፈልገውም።',
-                      style: theme.textTheme.bodySmall?.copyWith(height: 1.5),
-                    ),
+            InkWell(
+              onTap: () => PrivacyPolicyScreen.show(context),
+              borderRadius: BorderRadius.circular(12),
+              child: Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: theme.cardColor,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(
+                    color: theme.dividerColor.withValues(alpha: 0.1),
                   ),
-                ],
+                ),
+                child: Row(
+                  children: [
+                    const Icon(Icons.shield_outlined, color: primaryGold, size: 24),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'የአንሌይላብ መጽሐፍ ቅዱስ ሙሉ በሙሉ በነፃ የሚሰራ ሲሆን የንባብ መረጃዎን ወይም ማንነትዎን በምንም መልኩ አይሰበስብም። መለያ መፍጠርም አያስፈልገውም።',
+                            style: theme.textTheme.bodySmall?.copyWith(height: 1.5),
+                          ),
+                          const SizedBox(height: 8),
+                          const Text(
+                            'የግላዊነት ፖሊሲን ያንብቡ (Privacy Policy) →',
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: primaryGold,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
 
